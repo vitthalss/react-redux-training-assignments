@@ -4,6 +4,7 @@
 
 # JS_ExerciseSet-1 : 
  
+..\JS_ExerciseSet-1>node JS_ExerciseSet-1.js
  
 # Exercise-1 
 
