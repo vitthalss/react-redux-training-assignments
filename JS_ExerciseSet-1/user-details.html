@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+
+  displayName = function() {
+    var first = document.getElementById("firstname").value;
+    var second = document.getElementById("lastname").value;
+    
+    document.getElementById("here").innerHTML = first+" "+second;
+}
+
+</script>
+</head>
+<body>
+First name:<br>
+<input type="text" name="firstname" id='firstname'>
+<br>
+Last name:<br>
+<input type="text" name="lastname" id='lastname'>
+<br>
+<input type="button" value="Send" onclick="displayName()">
+<div>
+  <label>Full Name : </label> <label id="here"> </label> 
+</div> 
+
+<body>
+
+</html>
