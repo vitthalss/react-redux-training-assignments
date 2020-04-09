@@ -122,7 +122,7 @@ Full name : Ram Sharma
   displayName = function() {
     var first = document.getElementById("firstname").value;
     var second = document.getElementById("lastname").value;
-    document.getElementById("here").innerHTML = first+" "+second;
+    document.getElementById("fullname").innerHTML = first+" "+second;
 }
 
 </script>
@@ -136,7 +136,7 @@ Last name:<br>
 <br>
 <input type="button" value="Send" onclick="displayName()">
 <div>
-  <label>Full Name : </label> <label id="here"> </label> 
+  <label>Full Name : </label> <label id="fullname"> </label> 
 </div> 
 <body>
 </html>
@@ -147,9 +147,3 @@ Last name:<br>
 
  Full Name : Ram Sharma
  */
-  displayName = function() {
-    var first = document.getElementById("firstname").value;
-    var second = document.getElementById("lastname").value;
-    
-    document.getElementById("here").innerHTML = first+" "+second;
-}
