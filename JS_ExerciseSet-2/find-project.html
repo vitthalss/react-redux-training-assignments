@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title> 
+
+	3. Exercise on Array
+	Create a sample application in JavaScript to find out a project based on their id’s and print it’s name and description.
+	(Hint:  Create array of objects where each object contains project details (id , name , description) )
+
+	</title> 
+	
+	<script type="text/javascript"> 
+	
+			
+		let projects = [
+		{
+			id: 1,
+			name: "JavaScript",
+			description: "JavaScript description",
+		},
+		{
+			id: 2,
+			name: "React & Redux",
+			description: "React & Redux description",
+		},
+		{
+			id: 3,
+			name: "Node",
+			description: "Node description",
+		}
+		];
+		function findProject(projects,projectid) {
+		let project_names = [];
+		for (var i in projects) {
+			if(projects[i].id==projectid){
+			 document.getElementyById('project_id').innerHTML =projects[i].id;
+			 document.getElementyById('project_name').innerHTML = projects[i].name;
+			 document.getElementyById('project_description').innerHTML =projects[i].description;
+			}
+		}
+		return project_names;
+	};
+	function submitSearch() {
+		findProject(projects,document.forms[0].elements['pid'].value);
+	}
+			
+	</script> 
+</head> 
+
+<body> 
+	<center> 
+		<h1>3. Exercise on Array</h1> 
+		
+		<h4>Create a sample application in JavaScript to find out a project based on their id’s and print it’s name and description.
+		(Hint:  Create array of objects where each object contains project details (id , name , description) )</h4> 
+		
+		<hr color="Orange"> 
+		
+		<form name="myformss"> 
+			Enter project id: 
+			<input type="text" id="pid" value=""> 
+			
+			<br><br> 
+			
+			<input type="button" value="Find" onClick="submitSearch()">
+			<table style="width:100%">
+					<tr>
+						<th>Project Id</th>
+						<th>Project Name</th>
+						<th>Project Description</th>
+					</tr>
+					<tr>
+						<td id="project_id"></td>
+						<td id="project_name"></td>
+						<td id="project_description"></td>
+					</tr>
+			</table>
+		</form> 
+	</center> 
+</body> 
+</html> 
