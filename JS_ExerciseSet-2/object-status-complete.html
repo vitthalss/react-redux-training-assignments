@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		2. Exercise on Object
+		Create a sample application in JavaScript which print True if object contains the key = “status” and value = “complete” otherwise print False.
+		(Hint:  Create project object with keys (id , name , description , status) ) 
+	</title> 
+	
+	<script type="text/javascript"> 
+	
+		var obj = {
+        id : "",
+        name : "", 
+        description : "", 
+        status : "",
+        isStatusComplete : function() {
+           if(this.status==="complete"){
+              return true;
+            }
+            return false;
+        },
+		setFormValues : function() {
+          	obj.id = document.forms[0].elements['id'].value; 
+			obj.name = document.forms[0].elements['objname'].value; 
+			obj.description = document.forms[0].elements['description'].value; 
+			obj.status = document.forms[0].elements['status'].value; 
+			console.log("status:"+document.forms[0].elements['status'].value);
+			document.forms[0].elements['booleanValue'].value=obj.isStatusComplete();
+			console.log("return:"+document.forms[0].elements['booleanValue'].value);
+        }  
+    }
+	</script> 
+</head> 
+
+<body> 
+	<center> 
+		<h1>2. Exercise on Object</h1> 
+		
+		<h4>Create a sample application in JavaScript which print True if object contains the key = “status” and value = “complete” otherwise print False.
+		(Hint:  Create project object with keys (id , name , description , status) )</h4> 
+		
+		<hr color="Orange"> 
+		
+		<form name="myforms"> 
+			Enter the id: 
+			<input type="text" name=id value=""> 
+			
+			<br><br> 
+			Enter the name: 
+			<input type="text" name=objname value=""> 
+			
+			<br><br> 
+			Enter the description: 
+			<input type="text" name=description value=""> 
+			
+			<br><br> 
+			Enter the status: 
+			<input type="text" name=status value=""> 
+			
+			<br><br> 
+			
+			<input type="button" value="Submit" onClick="obj.setFormValues()"> 
+			<label>is status complete: </label><input type="text" disabled style="border: none;background: white;" name=booleanValue> 
+			<br> 
+		</form> 
+	</center> 
+</body> 
+
+</html> 
