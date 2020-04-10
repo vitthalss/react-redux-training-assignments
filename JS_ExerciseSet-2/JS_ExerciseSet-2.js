@@ -13,7 +13,7 @@ Create a sample application in JavaScript which print True if object contains th
 object-status-complete.html
 */
 
-//just sample program
+//sample program
 
 var objOfSpecifiedKeyValue = {id: 88, name: "Ram name", description: "Ram description",status:"complete"};
 var key = "status";
@@ -30,7 +30,7 @@ function isStatusComplete(objOfSpecifiedKeyValue, key){
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//just sample program
+//sample program
 
 var obj = {
         id : "",
@@ -52,7 +52,7 @@ var obj = {
   obj.status = "inprogress"; 
     
   // Using method of the object. 
-  console.log("isStatusCompletes::::"+obj.isStatusCompletes());
+  console.log("isStatusCompletes:"+obj.isStatusCompletes());
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,6 +103,56 @@ Create a sample application in JavaScript to perform the following task on list 
 (Hint:  Create array of objects where each object contains project details (id , name , status) also create separate function for each operation )
 Sample Object → { pid : 101 , pname : ‘RMS’ , status : ‘InProgress’ }
 
->>
-In Progress.
 */
+
+var projectArr = [];
+
+function addProject(pId, pName, pStatus){
+    
+    var newProject = {}; 
+    newProject.id = pId;
+    newProject.name = pName;
+    newProject.status = pStatus; 
+    projectArr.push(newProject);
+    getProject();
+}
+
+function deleteProject(pId){
+    for(p in projectArr)
+            {
+                if(pId == projectArr[p].id){
+
+                    projectArr.splice(p, 1);
+                }
+
+            }        
+    console.log("After deleteing object:"); getProject();  
+}
+
+
+function getProject(){
+    for(var i = 0; i < projectArr.length;i++){
+        console.log(projectArr[i].name);
+        console.log(projectArr[i].status);
+    }
+}
+
+
+function updateProjectStatus(projectId){          
+        for(p in projectArr)
+            {
+                if(projectId == projectArr[p].id && projectArr[p].status =='Inprogress' ){
+                    projectArr[p].status ='Completed';
+                    console.log(projectArr[p].status);
+                }
+            }
+        console.log("After updating object status:");
+        getProject();     
+    }
+
+    addProject(1, 'Project-1 JS', 'Inprogress');
+    addProject(2, 'Project-2 REACT', 'Completed');
+    updateProjectStatus(2);
+    deleteProject(2);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
