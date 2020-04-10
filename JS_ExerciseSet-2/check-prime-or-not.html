@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		1. Exercise on Control statement
+		Create a sample application in JavaScript to find out a number is Prime or  not.
+	</title> 
+	
+	<script type="text/javascript"> 
+	
+		// Function to check prime number 
+		function isPrime() { 
+			
+			var number, i, flag = true; 
+			number = document.myform.number.value; 
+			number = parseInt(number) 
+			for(i = 2; i <= number - 1; i++) 
+				if (number % i == 0) { 
+					flag = false; 
+					break; 
+				} 
+			if (flag == true) 
+				document.forms[0].elements['primeornottext'].value=number + " is prime"; 
+			else
+			document.forms[0].elements['primeornottext'].value=number + " is not prime"; 
+		} 
+	</script> 
+</head> 
+
+<body> 
+	<center> 
+		<h1>1. Exercise on Control statement</h1> 
+		
+		<h4>Create a sample application in JavaScript to find out a number is Prime or  not.</h4> 
+		
+		<hr color="Orange"> 
+		
+		<form name="myform"> 
+			Enter the number: 
+			<input type="text" name=number value=""> 
+			
+			<br><br> 
+			
+			<input type="button" value="Check" onClick="isPrime()">
+			<label>result : </label><input type="text" disabled style="border: none;background: white;" name=primeornottext> 
+		</form> 
+	</center> 
+</body> 
+
+</html> 
