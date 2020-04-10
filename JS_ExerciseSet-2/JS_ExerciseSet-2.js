@@ -141,7 +141,7 @@ function getProject(){
 function updateProjectStatus(projectId){          
         for(p in projectArr)
             {
-                if(projectId == projectArr[p].id && projectArr[p].status =='Inprogress' ){
+                if(projectId == projectArr[p].id && projectArr[p].status =='InProgress' ){
                     projectArr[p].status ='Completed';
                     console.log(projectArr[p].status);
                 }
@@ -150,9 +150,11 @@ function updateProjectStatus(projectId){
         getProject();     
     }
 
-    addProject(1, 'Project-1 JS', 'Inprogress');
+    addProject(1, 'Project-1 JS', 'InProgress');
     addProject(2, 'Project-2 REACT', 'Completed');
     updateProjectStatus(2);
     deleteProject(2);
+    addProject(2, 'Project-3 Angular', 'Completed');
+    addProject(2, 'Project-4 REACT-REDUX', 'Completed');
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
