@@ -121,3 +121,46 @@ Create a sample application in JavaScript to perform the following task on list 
 </html> 
 
 */
+
+
+
+/*
+2. Exercise on ES6 
+The objective of this challenge is to create a console Object. You should write three working functions inside MyConsole class to complete this challenge:
+* Create a log() function that takes user arguments and returns them as a string.
+* Create a history() function that takes an optional range as an argument.
+* Create a clearHistory() function to remove the history memory.
+
+Example:
+myconsole.log(123) o/p:--> “123”
+myconsole.log(true) o/p:--> “true”
+myconsole.log({name : Ram})  o/p:--> “{name : Ram}”
+myconsole.history() o/p:--> “123\n true\n {name : Ram}”
+myconsole.history(1) o/p:--> “123”
+myconsole.history(2) o/p:--> “123\n true”
+myconsole.clearHistory() o/p:--> true
+myconsole.history() o/p:--> “”
+
+Notes
+The history function:
+
+
+*/
+
+class MyConsole{
+
+  constructor(){}
+
+  log(arg){
+    var  value =  arg +"";
+       return value;
+  }
+  history(){
+    var  value =  arg +"";
+    return value;
+  }
+}
+var myconsole=new MyConsole();
+myconsole.log(123);
+myconsole.log(true);
+myconsole.log('{name : Ram}') ;
