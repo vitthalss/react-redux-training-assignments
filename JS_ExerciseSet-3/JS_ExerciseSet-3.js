@@ -148,9 +148,8 @@ The history function:
 */
 
 
-
 const hist = new Set();
-var myMap = new Map();
+const myMap = new Map();
 
 var myconsole = {
 
@@ -160,22 +159,21 @@ var myconsole = {
        return value;
   },
   history : function (){
-    // hist.forEach(v => console.log(v));
-    for (var item of hist) {
-      console.log(item);
-    }
+     hist.forEach(v => console.log(v));
+   
   },
-  history : function(index){
+  historyWithArg : function(index){
   var setIter = hist.values();
-
-  if(hist.size>index){
+	console.log("hist.size::"+hist.size);
+	console.log("index:"+index);
+  if(hist.size > index){
      console.log("Element for this index does not exist.");
   }
 
   for (var i = 1; i <= hist.size; i++) {
          myMap.set(i, setIter.next().value);
     }
-
+	console.log(myMap.get(index));
     return myMap.get(index);
   },
 
@@ -192,5 +190,8 @@ myconsole.log(123);
 myconsole.log(true);
 myconsole.log('{name : Ram}');
 myconsole.history();
+myconsole.historyWithArg(1);
+myconsole.historyWithArg(3);
 myconsole.clearHistory();
 myconsole.history();
+
