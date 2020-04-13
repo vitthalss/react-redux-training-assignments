@@ -33,11 +33,16 @@
 			obj.description = document.forms[0].elements['description'].value; 
 			obj.status = document.forms[0].elements['status'].value; 
 			console.log("status:"+document.forms[0].elements['status'].value);
+			 obj.listOfObjects.push({
+             id: obj.id,
+             name: obj.name,
+             status: obj.status,
+             description: obj.description
+        })
         },
 		createFunction : function() {
 			this.setFormValues();
 			var table = document.getElementById("myTable");
-			var head = table.createTHead();
 			var row = table.insertRow(-1);
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(1);
@@ -48,15 +53,70 @@
 			cell3.innerHTML = obj.description;
 			cell4.innerHTML = obj.status;
 		},
+
+		displayProject: function () {
+		this.setFormValues();
+        var table_div = document.getElementById('myTable');
+        table_div.innerHTML = "";
+
+        if (obj.listOfObjects.length == 0) {
+            table_div.innerHTML = "There is no data to display"
+        } else {
+           
+            var col = [];
+            var count = obj.listOfObjects.length;
+            for (var i = 0; i < count; i++) {
+                for (var key in obj.listOfObjects[i]) {
+                    if (col.indexOf(key) === -1) {
+                        col.push(key);
+                    }
+                }
+            }
+
+            var table = document.createElement("table");     
+            table.border = "1";
+            table.className = "table-css";
+
+            var tr = table.insertRow(-1);                   
+            for (var i = 0; i < col.length; i++) {
+                var th = document.createElement("th");      
+                th.innerHTML = col[i];
+                tr.appendChild(th);
+            }
+
+            for (var i = 0; i < count; i++) {
+                tr = table.insertRow(-1);
+                for (var j = 0; j < col.length; j++) {
+                    var tabCell = tr.insertCell(-1);
+                    tabCell.innerHTML = obj.listOfObjects[i][col[j]];  
+                }
+            }
+
+            table_div.append(table);
+        }
+
+    	},
+
 		countTrElements: function () {
-			var x = document.getElementById("myTable").rows.length;
-			document.getElementById("demo").innerHTML = "Found " + x + " tr elements in the table.";
+        var count = document.getElementsByTagName('tr').length;
+		document.getElementById("demo").innerHTML = "Found " + count + " tr elements including table headers.";
+        var check_div = document.getElementById('check');
+        check_div.innerHTML = "";
+        if (count - 1 == this.listOfObjects.length) {
+            check_div.innerHTML = "< tr > tag and size of the list is equal";
+        } else if (count == 0) {
+            check_div.innerHTML = "There is no table to check"
+        } else {
+            check_div.innerHTML = "< tr > tag and size of the list is not equal"
+        }
+
 		}
     }
+
 	</script> 
 </head> 
 
-<body onload="obj.createTableHeader();"> 
+<body> 
 
 		<h1>1. Exercise on DOM manipulation</h1> 
 		
@@ -88,7 +148,7 @@
 			<input type="text" name=status value=""> 
 			
 			<br><br> 
-			<input type="button" value="View Project List" onClick="obj.createFunction()">  
+			<input type="button" value="View Project List" onClick="obj.displayProject()">  
 			<br><br> 
 			<table id="myTable">
 			<tr>
@@ -98,10 +158,11 @@
 				<th>Status</th>
 			</tr>
 			</table>
-			<br><br> 
+			<br>
 			<input type="button"  value="Check"  onclick="obj.countTrElements()">
 			<br/>
 			<p id="demo"></p>
+			 <div id="check"> </div>
 			<input type="text" disabled style="border: none;background: white; width: 100%" name=message id="message" value=""> 
 		</form> 
 </body> 
