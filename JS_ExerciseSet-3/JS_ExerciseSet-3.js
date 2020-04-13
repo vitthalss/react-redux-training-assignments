@@ -147,6 +147,7 @@ The history function:
 
 */
 
+
 const hist = new Set();
 class MyConsole{
 
@@ -163,7 +164,13 @@ class MyConsole{
   }
 
    history(arg){
-    hist.forEach(v => console.log(v));
+    var setIter = hist.values();
+    var val = "";
+    for (var i = 1; i <= hist.size; i++) {
+        val=setIter.next().value;
+        console.log(setIter.next().value); 
+    }
+    return val;
   }
 
   clearHistory(){
@@ -176,7 +183,7 @@ class MyConsole{
 var myconsole=new MyConsole();
 myconsole.log(123);
 myconsole.log(true);
-myconsole.log('{name : Ram}') ;
+myconsole.log('{name : Ram}');
 myconsole.history();
 myconsole.clearHistory();
 myconsole.history();
