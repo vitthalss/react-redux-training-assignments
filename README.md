@@ -126,19 +126,26 @@ The objective of this challenge is to create a console Object. You should write 
 
 - Create a clearHistory() function to remove the history memory.
 
-''' 
+``` 
 Example:
 
 myconsole.log(123) o/p:--> “123”
+
 myconsole.log(true) o/p:--> “true”
+
 myconsole.log({name : Ram})  o/p:--> “{name : Ram}”
+
 myconsole.history() o/p:--> “123\n true\n {name : Ram}”
+
 myconsole.history(1) o/p:--> “123”
+
 myconsole.history(2) o/p:--> “123\n true”
+
 myconsole.clearHistory() o/p:--> true
+
 myconsole.history() o/p:--> “”
 
-'''
+```
 
 
 # ----------------------------------------------------------------
