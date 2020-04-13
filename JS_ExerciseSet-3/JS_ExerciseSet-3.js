@@ -147,20 +147,31 @@ The history function:
 
 */
 
+const hist = new Set();
 class MyConsole{
 
   constructor(){}
 
   log(arg){
     var  value =  arg +"";
+    hist.add(value);
        return value;
   }
+
   history(){
-    var  value =  arg +"";
-    return value;
+    return hist.values();
+  }
+
+  clearHistory(){
+    console.log("hist.size::"+hist.size);
+    hist.clear();
+    console.log("hist.size::"+hist.size);
   }
 }
 var myconsole=new MyConsole();
 myconsole.log(123);
 myconsole.log(true);
 myconsole.log('{name : Ram}') ;
+myconsole.history();
+myconsole.clearHistory();
+
