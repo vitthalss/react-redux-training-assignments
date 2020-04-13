@@ -177,21 +177,6 @@ var myconsole = {
 	 hist.forEach(v => console.log(v));
    }
   },
-  historyWithArg : function(index){
-  var setIter = hist.values();
-	console.log("hist.size::"+hist.size);
-	console.log("index:"+index);
-  if(hist.size > index){
-     console.log("Element for this index does not exist.");
-  }
-
-  for (var i = 1; i <= hist.size; i++) {
-         myMap.set(i, setIter.next().value);
-    }
-	console.log(myMap.get(index));
-    return myMap.get(index);
-  },
-
   clearHistory : function (){
       console.log("hist.size::"+hist.size);
       hist.clear();
@@ -209,3 +194,4 @@ myconsole.history(1);
 myconsole.history(3);
 myconsole.clearHistory();
 myconsole.history();
+
