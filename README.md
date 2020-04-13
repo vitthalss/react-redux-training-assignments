@@ -3,8 +3,10 @@
 # ----------------------------------------------------------------
 
 ### JS_ExerciseSet-1 : 
- 
+
+ ```
 ..\JS_ExerciseSet-1>node JS_ExerciseSet-1.js
+```
  
 #### Exercise-1 
 
@@ -66,9 +68,9 @@ O/P ➞ Full name : Ram Sharma
 # ----------------------------------------------------------------
 
 ### JS_ExerciseSet-2 : 
-
+```
 ..\JS_ExerciseSet-2>node JS_ExerciseSet-2.js
-
+```
 #### 1. Exercise on Control statement
 
 Create a sample application in JavaScript to find out a number is Prime or  not.
@@ -101,9 +103,9 @@ Sample Object → { pid : 101 , pname : ‘RMS’ , status : ‘InProgress’ }
 
 # ----------------------------------------------------------------
 ### JS_ExerciseSet-3 : 
-
+```
 ..\JS_ExerciseSet-2>node JS_ExerciseSet-3.js
-
+```
 #### 1. Exercise on DOM manipulation
 
 Create a sample application in JavaScript to perform the following task on list of Project object.
