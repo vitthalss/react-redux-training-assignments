@@ -159,8 +159,23 @@ var myconsole = {
        return value;
   },
   history : function (){
-     hist.forEach(v => console.log(v));
-   
+    
+   if(arguments.length>0){
+	var setIter = hist.values();
+	var index=0;
+	for (var i=0; i < arguments.length; i++) {
+        index = arguments[i];
+    }
+
+	for (var i = 1; i <= hist.size; i++) {
+         myMap.set(i, setIter.next().value);
+    }
+	console.log(myMap.get(index));
+    return myMap.get(index);
+   }
+   else{
+	 hist.forEach(v => console.log(v));
+   }
   },
   historyWithArg : function(index){
   var setIter = hist.values();
@@ -190,8 +205,7 @@ myconsole.log(123);
 myconsole.log(true);
 myconsole.log('{name : Ram}');
 myconsole.history();
-myconsole.historyWithArg(1);
-myconsole.historyWithArg(3);
+myconsole.history(1);
+myconsole.history(3);
 myconsole.clearHistory();
 myconsole.history();
-
