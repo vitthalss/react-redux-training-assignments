@@ -159,13 +159,18 @@ class MyConsole{
   }
 
   history(){
-    return hist.values();
+    hist.forEach(v => console.log(v));
+  }
+
+   history(arg){
+    hist.forEach(v => console.log(v));
   }
 
   clearHistory(){
-    console.log("hist.size::"+hist.size);
-    hist.clear();
-    console.log("hist.size::"+hist.size);
+      console.log("hist.size::"+hist.size);
+      hist.clear();
+      console.log("hist.size::"+hist.size);
+    return true;
   }
 }
 var myconsole=new MyConsole();
@@ -174,4 +179,5 @@ myconsole.log(true);
 myconsole.log('{name : Ram}') ;
 myconsole.history();
 myconsole.clearHistory();
+myconsole.history();
 
