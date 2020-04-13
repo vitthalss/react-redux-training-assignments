@@ -147,6 +147,12 @@ myconsole.clearHistory() o/p:--> true
 
 myconsole.history() o/p:--> “”
 
+
+Notes
+* The history function:
+* If no argument was passed to history function all history will be shown.
+* Each history lines (with and without range) have newline at the end except last line.
+
 ```
 
 
