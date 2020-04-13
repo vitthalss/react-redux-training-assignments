@@ -147,7 +147,11 @@ The history function:
 
 */
 
+
+
 const hist = new Set();
+var myMap = new Map();
+
 var myconsole = {
 
   log : function(arg){
@@ -161,14 +165,18 @@ var myconsole = {
       console.log(item);
     }
   },
-  history : function(arg){
-    var setIter = hist.values();
-    var val = "";
-    for (var i = 1; i <= hist.size; i++) {
-        val=setIter.next().value;
-        console.log(setIter.next().value); 
+  history : function(index){
+  var setIter = hist.values();
+
+  if(hist.size>index){
+     console.log("Element for this index does not exist.");
+  }
+
+  for (var i = 1; i <= hist.size; i++) {
+         myMap.set(i, setIter.next().value);
     }
-    return val;
+
+    return myMap.get(index);
   },
 
   clearHistory : function (){
