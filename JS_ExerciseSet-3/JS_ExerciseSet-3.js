@@ -147,23 +147,21 @@ The history function:
 
 */
 
-
 const hist = new Set();
-class MyConsole{
+var myconsole = {
 
-  constructor(){}
-
-  log(arg){
+  log : function(arg){
     var  value =  arg +"";
     hist.add(value);
        return value;
-  }
-
-  history(){
-    hist.forEach(v => console.log(v));
-  }
-
-   history(arg){
+  },
+  history : function (){
+    // hist.forEach(v => console.log(v));
+    for (var item of hist) {
+      console.log(item);
+    }
+  },
+  history : function(arg){
     var setIter = hist.values();
     var val = "";
     for (var i = 1; i <= hist.size; i++) {
@@ -171,20 +169,20 @@ class MyConsole{
         console.log(setIter.next().value); 
     }
     return val;
-  }
+  },
 
-  clearHistory(){
+  clearHistory : function (){
       console.log("hist.size::"+hist.size);
       hist.clear();
       console.log("hist.size::"+hist.size);
+      console.log(true);
     return true;
   }
-}
-var myconsole=new MyConsole();
+
+};
 myconsole.log(123);
 myconsole.log(true);
 myconsole.log('{name : Ram}');
 myconsole.history();
 myconsole.clearHistory();
 myconsole.history();
-
