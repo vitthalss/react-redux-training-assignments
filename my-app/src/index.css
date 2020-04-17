@@ -3,3 +3,10 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.center {
+  text-align: center;
+}
+.textcolor {
+  color: orangered;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
