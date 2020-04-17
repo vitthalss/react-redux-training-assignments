@@ -10,3 +10,10 @@ body {
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.list-group{
+  background-color: gray;
+}
+
+.border{
+ border: none;background: white;
+}
