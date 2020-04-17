@@ -7,7 +7,7 @@ class NameComponent extends Component {
        <body>
            <div className="Hello">
               <div>
-                <h1>Hello Vitthal!</h1>
+                 <h1 className="textstyle">Hello Vitthal!</h1>
               </div>
           </div>
       </body>
