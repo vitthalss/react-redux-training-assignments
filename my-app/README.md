@@ -1,3 +1,11 @@
+**ReactJS Assignment-1**
+
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
 > Q1).Create an UI which displays Hello your name in one component and returns the output into another component .
 
 (Topics covered in this questions are-components, component injection).
