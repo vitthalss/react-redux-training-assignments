@@ -1,4 +1,4 @@
-### ReactJS Assignment-1
+### REACT JS ASSIGNMENT-1
 
 ```
 npx create-react-app my-app
