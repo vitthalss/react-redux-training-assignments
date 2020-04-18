@@ -1,4 +1,13 @@
-> react-redux-training-assignments
+**react-redux-training-assignments**
+
+```
+ASSIGNMENTS:
+```
+- JS_ExerciseSet-1
+- JS_ExerciseSet-2
+- JS_ExerciseSet-3
+- REACT JS ASSIGNMENT-I
+
 
 ``` ---------------------------------------------------------------------------------------------------------------------- ```
 
