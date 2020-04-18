@@ -1,7 +1,7 @@
 **react-redux-training-assignments**
 
 ```
-ASSIGNMENTS:
+List of assignments:
 ```
 - JS_ExerciseSet-1
 - JS_ExerciseSet-2
