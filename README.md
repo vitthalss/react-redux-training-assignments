@@ -7,6 +7,7 @@ List of assignments:
 - JS_ExerciseSet-2
 - JS_ExerciseSet-3
 - REACT JS ASSIGNMENT-I
+  - my-app
 
 
 ``` ---------------------------------------------------------------------------------------------------------------------- ```
