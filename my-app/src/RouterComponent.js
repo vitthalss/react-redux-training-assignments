@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Links from './Links';
+import HomePageComponent from './HomePageComponent';
+import AboutPageComponent from './AboutPageComponent';
+import ServicePageComponent from './ServicePageComponent';
+import ContactPageComponent from './ContactPageComponent';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
-const HomePageComponent = () => {<h1>Home Page</h1>}
-const AboutPageComponent = () => {<h1>About Page</h1>}
-const ServicePageComponent = () => {<h1>Service Page</h1>}
-const ContactPageComponent = () => {<h1>Contact Page</h1>}
-
-const Links = () => {
-          <div>         
-              <NavLink activeClassName="selected" to="/home">Home</NavLink> | 
-              <NavLink activeClassName="selected" to="/about">About</NavLink> | 
-              <NavLink activeClassName="selected" to="/service">Service</NavLink> | 
-              <NavLink activeClassName="selected" to="/contact">Contact</NavLink> 
-          </div>
-}
-const RouterComponent = () => {
+class RouterComponent extends Component {
+  render() {
+    return (
              <Router>
               <Links/>
               <Route exact path="/home" Component={HomePageComponent}/>
@@ -23,9 +17,7 @@ const RouterComponent = () => {
               <Route path="/service" Component={ServicePageComponent}/>
               <Route path="/contact" Component={ContactPageComponent}/>
             </Router>
+    );
+  }
 }
-
-ReactDOM.render(
-      <section> <RouterComponent/> </section>,
-       document.getElementById('root')
-);
+export default RouterComponent;
