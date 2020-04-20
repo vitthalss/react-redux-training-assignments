@@ -11,10 +11,10 @@ class RouterComponent extends Component {
     return (
              <Router>
               <Links/>
-              <Route exact path="/home" Component={HomePageComponent}/>
-              <Route path="/about" Component={AboutPageComponent}/>
-              <Route path="/service" Component={ServicePageComponent}/>
-              <Route path="/contact" Component={ContactPageComponent}/>
+                <Route exact path="/home" component={HomePageComponent}/>
+                <Route path="/about" component={AboutPageComponent}/>
+                <Route path="/service" component={ServicePageComponent}/>
+                <Route path="/contact" component={ContactPageComponent}/>
             </Router>
     );
   }
