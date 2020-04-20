@@ -1,5 +1,4 @@
 import React from 'react';
-import OddEvenArrayComponent from './OddEvenArrayComponent';
 const OddEvenComponent = (props) => {
         var arrays = [props.array];
         var arr = ['1','2','3','8','5'];
