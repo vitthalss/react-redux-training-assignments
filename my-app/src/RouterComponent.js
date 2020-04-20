@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Links from './Links';
 import HomePageComponent from './HomePageComponent';
 import AboutPageComponent from './AboutPageComponent';
