@@ -7,13 +7,16 @@ import EmployeeComponent from './EmployeeComponent';
 import EmployeeListComponent from './EmployeeListComponent';
 import OddEvenArrayComponent from './OddEvenArrayComponent';
 import CustomerComponent from './CustomerComponent';
+import RouterComponent from './RouterComponent';
 import './index.css';
 
 ReactDOM.render(
       <section>
-        <Hello/> <NameComponent/> <ProjectManagement/> <EmployeeComponent/> <EmployeeListComponent/>
-         <OddEvenArrayComponent/><CustomerComponent/>
+        <Hello/> <NameComponent/> <ProjectManagement/>
+        <RouterComponent/>
+        <EmployeeComponent/> <EmployeeListComponent/>
+        <OddEvenArrayComponent/> <CustomerComponent/>
       </section>
-  ,
-  document.getElementById('root')
-);
+      ,
+      document.getElementById('root')
+    );
