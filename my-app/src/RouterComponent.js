@@ -4,7 +4,7 @@ import HomePageComponent from './HomePageComponent';
 import AboutPageComponent from './AboutPageComponent';
 import ServicePageComponent from './ServicePageComponent';
 import ContactPageComponent from './ContactPageComponent';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 class RouterComponent extends Component {
   render() {
