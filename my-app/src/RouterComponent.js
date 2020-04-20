@@ -9,7 +9,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 class RouterComponent extends Component {
   render() {
     return (
-             <Router>
+             <Router className="center">
               <Links/>
                 <Route exact path="/home" component={HomePageComponent}/>
                 <Route path="/about" component={AboutPageComponent}/>
