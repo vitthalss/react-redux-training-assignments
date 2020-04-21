@@ -15,6 +15,7 @@
 - REACT JS ASSIGNMENT-II
   - my-app
   - react-redux-registration-login
+  - increment-and-decrement-counter
 
 
 ``` ---------------------------------------------------------------------------------------------------------------------- ```
