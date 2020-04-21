@@ -6,7 +6,7 @@ class ProjectManagement extends Component {
     return (
       <div className="center">
         <div>
-          <h1 className="textstyle">Q2: Welcome to REACT - PROJECT MANAGEMENT LOGO!</h1>
+          <h1 className="textstyle">Q2 & Q8</h1>
             <svg  width="100" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.5 188.5" aria-labelledby="title">
                 <title id="title">Icon</title>
                 
