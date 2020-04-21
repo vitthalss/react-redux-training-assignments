@@ -12,3 +12,10 @@
  
 (Topics covered in these question are-components, props, state, event handling, Routing).
 
+> How to run 'react-redux-registration-login'?
+
+```
+...\>cd react-redux-registration-login
+...\react-redux-registration-login>npm install
+...\react-redux-registration-login>npm start
+```
