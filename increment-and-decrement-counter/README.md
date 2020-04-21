@@ -6,6 +6,8 @@
 
 (Topics covered in these question are-components, state, event handling).
 
+> How to run 'increment-and-decrement-counter'?
+
 ```
 ...\>cd increment-and-decrement-counter
 ...\increment-and-decrement-counter>npm install
