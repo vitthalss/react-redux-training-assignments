@@ -12,6 +12,7 @@
   - JS_ExerciseSet-3
 - REACT JS ASSIGNMENT-I
   - my-app
+- REACT JS ASSIGNMENT-II
 
 
 ``` ---------------------------------------------------------------------------------------------------------------------- ```
@@ -211,6 +212,7 @@ npm start
 
 
 > REACT JS ASSIGNMENT-II
+
 
 > Q6). Create an Application which implements Login and Registration functionality.
 
