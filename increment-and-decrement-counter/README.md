@@ -7,7 +7,7 @@
 (Topics covered in these question are-components, state, event handling).
 
 ```
-\>cd increment-and-decrement-counter
-\increment-and-decrement-counter>npm install
-\increment-and-decrement-counter>npm start
+...\>cd increment-and-decrement-counter
+...\increment-and-decrement-counter>npm install
+...\increment-and-decrement-counter>npm start
 ```
