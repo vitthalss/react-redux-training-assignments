@@ -13,6 +13,8 @@
 - REACT JS ASSIGNMENT-I
   - my-app
 - REACT JS ASSIGNMENT-II
+  - my-app
+  - react-redux-registration-login
 
 
 ``` ---------------------------------------------------------------------------------------------------------------------- ```
