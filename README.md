@@ -19,6 +19,32 @@
 
 
 ``` ---------------------------------------------------------------------------------------------------------------------- ```
+> How to run 'my-app'?
+
+```
+...\>cd my-app
+...\my-app>npm install
+...\my-app>npm start
+```
+
+> How to run 'react-redux-registration-login'?
+
+```
+...\>cd react-redux-registration-login
+...\react-redux-registration-login>npm install
+...\react-redux-registration-login>npm start
+```
+
+> How to run 'increment-and-decrement-counter'?
+
+```
+...\>cd increment-and-decrement-counter
+...\increment-and-decrement-counter>npm install
+...\increment-and-decrement-counter>npm start
+```
+
+
+``` ---------------------------------------------------------------------------------------------------------------------- ```
 
 > JS_ExerciseSet-1 : 
 
