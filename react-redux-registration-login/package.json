@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vitthalss/react-redux-registration-login.git"
+    "url": "https://github.com/vitthalss/react-redux-training-assignments/tree/master/react-redux-registration-login"
   },
   "license": "MIT",
   "scripts": {
